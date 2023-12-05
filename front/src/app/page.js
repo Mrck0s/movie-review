@@ -1,4 +1,5 @@
 "use client";
+
 import { movies } from "../data/movies";
 import { reviews } from "../data/reviews";
 import { useKeenSlider } from "keen-slider/react";
@@ -15,8 +16,6 @@ import Image from "next/image";
 import "keen-slider/keen-slider.min.css";
 import MoviePoster from "../components/MoviePoster";
 import ReviewCard from "../components/ReviewCard";
-import NavLogged from "@/components/NavLogged";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const [sliderRef] = useKeenSlider({
