@@ -11,7 +11,7 @@ const SessionContextProvider = ({ children }) => {
   useEffect(() => {
     const userData = getStorageData();
     if (userData) {
-      setUserLogged(JSON.parse(userData));
+      setUserLogged(userData);
       console.log("The user is logged", userData);
     } else {
       console.log("There is no user");

@@ -6,7 +6,8 @@ export const saveLocalStorageData = (userData) => {
 export const getStorageData = () => {
   const userData = localStorage.getItem("userData");
   console.log("Datos extraidos del localstorage:", userData);
-  return userData;
+  const userDataNew = JSON.parse(userData);
+  return userDataNew;
 };
 
 export const deleteStorageData = () => {
