@@ -8,5 +8,5 @@ public interface RatingRepository extends JpaRepository<Rating, Integer> {
     Integer countByMovieId(Integer movieId);
     Rating findByMovieIdAndUserId(Integer movieId, Integer userId);
 
-    Double avgByMovieId(Integer movieId);
+    //Double avgByMovieId(Integer movieId);
 }

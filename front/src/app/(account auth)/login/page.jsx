@@ -11,6 +11,8 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+
+
   const { setUserLogged } = useContext(userContext);
 
   const router = useRouter();
@@ -19,13 +21,16 @@ const Login = () => {
     e.preventDefault();
     console.log("username:", username);
     console.log("pass:", password);
+    
+    const submitData = { username, password };
+
     try {
       const response = await fetch("http://localhost:8080/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify(submitData),
       });
 
       if (response.ok) {
